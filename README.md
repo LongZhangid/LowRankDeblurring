@@ -4,7 +4,7 @@ Now, we have achieved the program of image deblurring using low rank method:
 
 X_hat = argmin_X {λ/2 || K * X - F ||_2^2 + phi(X)}
 
-Where, phi(x) is prior term.
+Where, K is PSF, X is ideal image and F is imaging via optical system, phi(x) is prior term.
 
 The result (Here, parameters is not adjustive, if you want to use it, please to do it.):
 
