@@ -1,3 +1,13 @@
+"""
+By Long Zhang in CIOMP
+2025/9/1
+ref: Yang, Hang, et al. 
+    "Low-rank approach for image nonblind deconvolution 
+    with variance estimation." Journal of Electronic 
+    Imaging 24.6 (2015): 063013-063013.
+"""
+
+
 import numpy as np
 from PIL import Image
 from matplotlib import pyplot as plt
@@ -173,7 +183,7 @@ class LowRankDeblur:
         threshold = self.c1 * self.sigma_s**2 / (np.sqrt(S) + 1e-10)
         
         # Soft thresholding
-        Sigma_hat = np.maximum(Sigma - threshold, 0)
+        Sigma_hat = np.sign(Sigma) * np.maximum(np.abs(Sigma) - threshold, 0)
         
         # Calculate rank
         rank = np.sum(Sigma_hat > 0)
@@ -251,7 +261,7 @@ if __name__ == "__main__":
     
     # Use smaller parameters for testing
     deblurrer = LowRankDeblur(noisy_blurred, kernel, img, 
-                              eta=0.9, max_iter=100)
+                              eta=1.6, max_iter=35)
     restored_img, snrl, ssiml = deblurrer._solver()
     
     # Plot results
