@@ -8,7 +8,7 @@ Where, K is PSF, X is ideal image and F is imaging via optical system, phi(x) is
 
 The result (Here, parameters is not adjustive, if you want to use it, please to do it.):
 
-<img width="1366" height="663" alt="Figure_1" src="https://github.com/user-attachments/assets/7b0e640d-c0e4-4819-92a0-30bf36faf548" />
+<img width="1366" height="663" alt="Figure_1" src="https://github.com/user-attachments/assets/7e53b3a2-9c54-4aa7-a225-2d4ca2f33c1c" />
 
 If you want to attain more detailed information, you can read file for LowRankApproximation.pdf
 
