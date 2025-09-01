@@ -35,8 +35,8 @@ For a reference patch y_p at position p:
    d(p,q) = \|y_p - y_q\|^2
 3. **Selection**: Keep top $K$ (e.g., 20) most similar patches
 4. **Matrix Formation**: Stack selected patches as column vectors:
-   Y_p = [y_1 | y_2 | ... | y_K] ∈ R^(n²×K)
-   (For 8×8 patches: $n^2=64$, $Y_p \in \mathbb{R}^{64\times20}$)
+   Y_p = [y_1,  y_2, ..., y_K] ∈ R^(n²×K)
+   (For 8×8 patches: $n²=64$, $Y_p \in \mathbb{R}^{64\times20}$)
 
 ---
 
