@@ -6,6 +6,6 @@ X_hat = argmin_X {λ/2 || K * X - F ||_2^2 + phi(X)}
 
 Where, phi(x) is prior term.
 
-The result:
+The result (Here, parameters is not adjustive, if you want to use it, please do it.):
 
 <img width="1366" height="663" alt="Figure_1" src="https://github.com/user-attachments/assets/7b0e640d-c0e4-4819-92a0-30bf36faf548" />
