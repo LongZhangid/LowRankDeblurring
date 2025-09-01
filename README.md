@@ -68,7 +68,7 @@ where Γ_p represents random, full-rank noise that disrupts the low-rank structu
    τ_p(i) = cη² / sqrt(max(σ_i(X_p)²/N(p) - η², 0) + ε)
    - η: Noise level estimate
    - N(p): Number of similar patches
-   - c,\epsilon$: Regularization parameters
+   - c,ε: Regularization parameters
 
 4. **Reconstruction**:
    X̂_p = UΣ̂Vᵀ
