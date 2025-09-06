@@ -186,7 +186,7 @@ private:
 	void sub_denoise() {
 		/*
 		Subroutine for image denoising using low-rank approximation.
-		x^{(k)} = argmin_{x} { (¦Ë^{(k)}/2) ||y^{(k)} - x||^2 + ¦µ(x) }
+		x^{(k)} = argmin_{x} { (Â¦Ã‹^{(k)}/2) ||y^{(k)} - x||^2 + Â¦Âµ(x) }
 		*/
 		Eigen::MatrixXd temp_img = Eigen::MatrixXd::Zero(m, n);
 		Eigen::MatrixXd weight_img = Eigen::MatrixXd::Zero(m, n);
@@ -240,8 +240,8 @@ private:
 
 	void update_lambda() {
 		/*
-		Update the penalty parameter ¦Ë.
-		¦Ë^{(k+1)} = ¦Â * ¦Ë^{(k)}
+		Update the penalty parameter Â¦Ã‹.
+		Â¦Ã‹^{(k+1)} = Â¦Ã‚ * Â¦Ã‹^{(k)}
 		*/
 		lambda *= beta;
 	}
@@ -290,7 +290,7 @@ public:
 			sub_denoise();
 			update_lambda();
 			psnrl.push_back(psnr());
-			if ((i + 1) / 1 == 0) {
+			if ((i + 1) % 1 == 0) {
 				std::cout << "Iteration " << i + 1 << ", PSNR: " << psnrl[i + 1] << "\n";
 			}
 			if ((i + 1) >= max_iter) {
@@ -446,4 +446,5 @@ Eigen::MatrixXd ifft_img(Eigen::VectorXcd& freq, int m, int n) {
 		}
 	}
 	return result;
+
 }
