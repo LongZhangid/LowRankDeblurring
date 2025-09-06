@@ -16,7 +16,7 @@ Update in 2025/09/06
 
 Now, We update c++ file that accomplish same function.
 
-# =============================================
+# =====================================
 # Non-Local Image Denoising Algorithm
 
 ## 1. Block Matching
